@@ -1,0 +1,27 @@
+[project]
+name = "roastpilot"
+version = "0.1.0"
+description = "Artisan RoR Auto Controller"
+requires-python = ">=3.12,<3.13"
+
+dependencies = [
+    "PySide6",
+    "pyqtgraph",
+    "numpy",
+    "scipy",
+    "websockets",
+    "pyqtgraph"
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+roastpilot = "roastpilot.main:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
