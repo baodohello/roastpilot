@@ -1,8 +1,9 @@
 from __future__ import annotations
 
+from roastpilot.safety.guard import BurnerGuard
+from roastpilot.safety.watchdog import Watchdog
 
-def output_is_safe(percent: float) -> bool:
-    return 0.0 <= percent <= 100.0
+__all__ = ["BurnerGuard", "Watchdog", "clamp_output"]
 
 
 def clamp_output(percent: float) -> float:

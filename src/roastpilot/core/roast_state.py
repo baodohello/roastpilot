@@ -19,8 +19,6 @@ class RoastState:
     target_ror_c_per_min: float | None = None
     burner_percent: float = 0.0
     warning: str | None = None
-    turning_point_s: float | None = None
-    turning_point_temp_c: float | None = None
     history: list[tuple[float, float, float | None]] = field(default_factory=list)
 
     def reset(self, ambient_temp_c: float = 25.0) -> None:
@@ -31,6 +29,4 @@ class RoastState:
         self.target_ror_c_per_min = None
         self.burner_percent = 0.0
         self.warning = None
-        self.turning_point_s = None
-        self.turning_point_temp_c = None
         self.history.clear()
