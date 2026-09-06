@@ -13,6 +13,8 @@ connect to or command any roaster hardware.
 Create an environment with Python 3.12, install the project, then run:
 
 ```bash
+python -m venv .venv
+.venv\Scripts\activate
 pip install -e .
 roastpilot
 ```
